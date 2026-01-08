@@ -1,5 +1,5 @@
 function mergeSort(arr) {
-    //base case 
+    //base case
     if (arr.length <= 1) {
         return arr;
     }
@@ -12,14 +12,14 @@ function mergeSort(arr) {
     leftArr = mergeSort(leftArr);
     rightArr = mergeSort(rightArr);
 
-    //once arrays are returned, we want to beginning arranging back in ascending order
+    //once arrays are returned, we want to begin arranging back together in ascending order
     let leftIndex = 0;
     let rightIndex = 0;
     let sortedArray = [];
 
     //use a while loop to keep checking until 1 array has been fully evaluated
     while(leftIndex < leftArr.length && rightIndex < rightArr.length) {
-       if(leftArr[leftIndex] < rightArr[rightIndex]){
+       if(leftArr[leftIndex] <= rightArr[rightIndex]){
         sortedArray.push(leftArr[leftIndex++]);  
        } else {
         sortedArray.push(rightArr[rightIndex++]);
